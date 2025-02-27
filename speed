@@ -1,0 +1,13 @@
+function travelTime(speed, distance) {
+    if (speed <= 0) {
+        return "Speed must be greater than zero.";
+    }
+
+    let timeInHours = distance / speed;
+    let hours = Math.floor(timeInHours);
+    let minutes = Math.round((timeInHours - hours) * 60);
+
+    return `${hours} hour${hours !== 1 ? 's' : ''} and ${minutes} minute${minutes !== 1 ? 's' : ''}`;
+}
+
+
